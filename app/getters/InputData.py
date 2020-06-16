@@ -1,5 +1,4 @@
 
-import os
 
 '''
 The method getInputData will get the data from the input files and return the listOfNumbersFromDirectory and alphaPhrasesFromDictionary

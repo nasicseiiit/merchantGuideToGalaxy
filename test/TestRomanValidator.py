@@ -5,7 +5,7 @@ from app.helper.RomanValidator import isItRomanChar
 
 class RomanValidatorTest(unittest.TestCase):
     ''' test case to find is the char is in roman numbers with valid roman char'''
-    def testIsItRomanChare(self):
+    def testIsItRomanChar(self):
         romanChar = "V"
         expectedAnswer = True
         actualAnswer = isItRomanChar(romanChar)

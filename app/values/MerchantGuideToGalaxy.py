@@ -44,7 +44,6 @@ def merchantGuideToGalaxy(fileData):
 def main():
     fileName = getCliArguments()
     fileData = getFileData(fileName)
-    print(fileData)
     if len(fileData) > 0:
         answersToQueries = merchantGuideToGalaxy(fileData)
         printOutputData(answersToQueries)

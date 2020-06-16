@@ -3,7 +3,7 @@ import unittest
 from app.helper.RomanToNumberConversion import romanToNumber
 
 
-class RomanToDecimalTest(unittest.TestCase):
+class Test_RomanToDecimal(unittest.TestCase):
     ''' test case to find the decimal value for roman string'''
     def testRomanToDecimal(self):
         romanString = "MCM"

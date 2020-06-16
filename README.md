@@ -79,10 +79,17 @@ First, clone merchantGuideToGalaxy using git
 
 _`https://github.com/nasicseiiit/merchantGuideToGalaxy`_
 
+# To build the project
+
+Then, cd to the merchantGuideToGalaxy folder 
+
+ cd merchantGuideToGalaxy/
+ 
+ sudo python setup.py install 
 
 #To run the project
 
-Then, cd to the merchantGuideToGalaxy folder 
+ cd to the merchantGuideToGalaxy folder 
  
  cd merchantGuideToGalaxy
  
@@ -100,6 +107,14 @@ provide the input format using CLI or STDIN
 
 `-> Passing zero command line arguments and not providing any STDIN input then the system by default will take the file in path  data/inputFile`
 
+#Steps to run the test cases
+ 
+ cd to merchantGuideToGalaxy
+
+ Then, Execute below command
+ 
+  `python -m unittest test/TestSuite.py`
+  
 #Contributing
 
 As I am a beginner and writing the projects in GitHub. 
