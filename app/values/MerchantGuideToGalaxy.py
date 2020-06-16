@@ -1,38 +1,40 @@
-
-
-
+from app.getters.CliArguments import getCliArguments
 from app.getters.InputData import getFileData
-from app.helper.GenericHelper import findMissedWordCredits, findNumericValueToRoman, findCredits
+from app.helper.MissedWords import findMissedWordCredits
+from app.helper.QuerySolutions import answerForQueryMany, answerForQueryMuch
 from app.logger.PrintData import printOutputData
 
-def answerQuery(splitLine,wordToRomanValue,missingValuesForMetals):
+''' the method will return the answers for queries '''
+def answerQuery(splitLine,tokenRomanValue,missingValuesForMetals):
     line = " "
     line = line.join(splitLine)
     if(splitLine[1] == "MANY"):
-        [flag,answerQuery] = findCredits(splitLine[4:len(splitLine)-1],wordToRomanValue,missingValuesForMetals)
+        [flag,answerQuery] = answerForQueryMany(splitLine[4:len(splitLine)-1],tokenRomanValue,missingValuesForMetals)
         if(flag==1):
             answerQuery = line[20:len(line) - 1].lower() + "is " + str(answerQuery)
     elif(splitLine[1] == "MUCH"):
-        [flag, answerQuery] = findNumericValueToRoman(splitLine[3:len(splitLine)-1],wordToRomanValue)
+        [flag, answerQuery] = answerForQueryMuch(splitLine[3:len(splitLine)-1],tokenRomanValue)
         if (flag == 1):
-            answerQuery = line[11:len(line)-1].lower()+"is "+str(answerQuery)
+            answerQuery = line[12:len(line)-1].lower()+"is "+str(answerQuery)
     else:
         answerQuery = "Incorrect line type is supplied"
     return answerQuery
-
+'''
+The method merchantGuideToGalaxy will give the solutu 
+'''
 def merchantGuideToGalaxy(fileData):
     missingValuesForMetals = {}
     answersToQueries = []
-    wordToRomanValue = {}
+    tokenRomanValue = {}
     for line in fileData:
         line = line.upper()
         splitLine = line.split()
         if(len(splitLine)==3 and splitLine[1] == 'IS'):
-            wordToRomanValue[splitLine[0]] = splitLine[2]
+            tokenRomanValue[splitLine[0]] = splitLine[2]
         elif(line.endswith("?")):
-            answersToQueries.append(answerQuery(splitLine,wordToRomanValue,missingValuesForMetals))
+            answersToQueries.append(answerQuery(splitLine,tokenRomanValue,missingValuesForMetals))
         elif(line.endswith("CREDITS")):
-            [missedWord,missedWordCredits] = findMissedWordCredits(splitLine[:len(splitLine)-1],wordToRomanValue)
+            [missedWord,missedWordCredits] = findMissedWordCredits(splitLine[:len(splitLine)-1],tokenRomanValue)
             missingValuesForMetals[missedWord] = missedWordCredits
         else:
             answersToQueries.append("Incorrect line type is supplied")
@@ -40,7 +42,9 @@ def merchantGuideToGalaxy(fileData):
 
 #main method
 def main():
-    fileData = getFileData()
+    fileName = getCliArguments()
+    fileData = getFileData(fileName)
+    print(fileData)
     if len(fileData) > 0:
         answersToQueries = merchantGuideToGalaxy(fileData)
         printOutputData(answersToQueries)

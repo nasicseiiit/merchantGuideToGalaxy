@@ -1,4 +1,5 @@
 
+import os
 
 '''
 The method getInputData will get the data from the input files and return the listOfNumbersFromDirectory and alphaPhrasesFromDictionary
@@ -25,8 +26,8 @@ def checkFileExistance(path_to_file):
     except IOError:  # catching the error
         return False  # if the file does not exist returning the False
 
-def getFileData():
-    fileName = getFileName()
+''' getting the file data'''
+def getFileData(fileName):
     filePointer = checkFileExistance(fileName)  # method to check whether the file exist or not
     if(filePointer != False):
         fileData = readData(filePointer)
@@ -34,8 +35,4 @@ def getFileData():
     else:
         print("The input file is not exist")
         return []
-
-def getFileName():
-    fileName = input("Enter the input filename: ")
-    return fileName
 

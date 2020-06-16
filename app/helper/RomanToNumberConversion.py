@@ -1,12 +1,7 @@
-import re
 
-def validateRomanNumber(romanString):
-    result = 0
-    romanNumberValidator = "^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"
-    if(re.search(romanNumberValidator,romanString)):
-        result = 1
-    return result
+from app.helper.RomanValidator import validateRomanNumber
 
+'''finding the dicimal number equivalent to romanString'''
 def romanToNumber(romanString):
     if(validateRomanNumber(romanString)):
         inegralValue = convertRomanToNumber(romanString)
