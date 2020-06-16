@@ -5,7 +5,7 @@ Buying and selling over the galaxy requires you to convert numbers and units, an
 The numbers used for intergalactic transactions follows similar convention to the roman numerals and you have painstakingly collected the appropriate translation between them.
 Roman numerals are based on seven symbols:
  
-#Symbol Value
+# Symbol Value
 
 I 1
 
@@ -31,7 +31,7 @@ example, 1,000 = M, 900 = CM, and 3 = III. Therefore, 1903 = MCMIII. (Source: Wi
 Input to your program consists of lines of text detailing your notes on the conversion between intergalactic units and roman numerals.
 You are expected to handle invalid queries appropriately.
 
-#Test input:
+# Test input:
 
 glob is I
 
@@ -57,7 +57,7 @@ how many Credits is glob prok Iron ?
 
 how much wood could a woodchuck chuck if a woodchuck could chuck wood ?
 
-#Test Output:
+# Test Output:
 
 pish tegj glob glob is 42
 
@@ -73,13 +73,13 @@ I have no idea what you are talking about
 
 Please install python 3 and above
 
-#Installation
+# Installation
 
 First, clone merchantGuideToGalaxy using git
 
 _`https://github.com/nasicseiiit/merchantGuideToGalaxy`_
 
-#To build the project
+# To build the project
 
 Then, cd to the merchantGuideToGalaxy folder 
 
@@ -87,7 +87,7 @@ Then, cd to the merchantGuideToGalaxy folder
  
  sudo python setup.py install 
 
-#To run the project
+# To run the project
 
  cd to the merchantGuideToGalaxy folder 
  
@@ -101,13 +101,13 @@ Then, cd to the merchantGuideToGalaxy folder
  
  python MerchantGuideToGalaxy.py
 
-#Input Format
+# Input Format
 
 provide the input format using CLI or STDIN
 
 `-> Passing zero command line arguments and not providing any STDIN input then the system by default will take the file in path  data/inputFile`
 
-#Steps to run the test cases
+# Steps to run the test cases
  
  cd to merchantGuideToGalaxy
 
@@ -115,7 +115,7 @@ provide the input format using CLI or STDIN
  
   `python -m unittest test/TestSuite.py`
   
-#Contributing
+# Contributing
 
 As I am a beginner and writing the projects in GitHub. 
 If you have any ideas or improvements, just open an issue by clicking on below link and tell me what you think.
@@ -124,6 +124,6 @@ https://github.com/nasicseiiit/merchantGuideToGalaxy/issues/new
 
 If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
 
-#Licensing
+# Licensing
 
 This project is licensed under Unlicense license. This license does not require you to take the license with you to your project. 
