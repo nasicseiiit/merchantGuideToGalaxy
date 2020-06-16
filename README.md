@@ -79,7 +79,7 @@ First, clone merchantGuideToGalaxy using git
 
 _`https://github.com/nasicseiiit/merchantGuideToGalaxy`_
 
-# To build the project
+#To build the project
 
 Then, cd to the merchantGuideToGalaxy folder 
 
