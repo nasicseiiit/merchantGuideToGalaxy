@@ -1,11 +1,8 @@
 
 import re
 def validateRomanNumber(romanString):
-    result = 0
     romanNumberValidator = "^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"
-    if(re.search(romanNumberValidator,romanString)):
-        result = 1
-    return result
+    return re.search(romanNumberValidator, romanString)
 
 ''' to find whether the char is in roman numbers or not '''
 def isItRomanChar(word):
@@ -29,5 +26,6 @@ def isTokenInTokenRomanValueMap(splitLine,tokenRomanValue):
                 return flag,"The character is not in roman numbers"
         else:
             flag = 0
-            return flag,"I have no idea what you are talking about"
+            noIdeaError = "I have no idea what you are talking about"
+            return flag,noIdeaError
     return flag,romanString

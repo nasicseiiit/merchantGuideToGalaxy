@@ -1,3 +1,4 @@
+import math
 from app.helper.RomanToNumberConversion import romanToNumber
 
 ''' finding the credits for missed words'''
@@ -24,11 +25,17 @@ def findMissedWordCredits(splitLine,tokenRomanValue):
 ''' finding the missed words'''
 def getMissedWord(tokensAndMissedWord,tokenRomanValue):
     missedWordsCount = 0
+    noIdeaError = "I have no idea what you are talking about"
     for token in tokensAndMissedWord:
         if(missedWordsCount == 0):
-            if(token not in tokenRomanValue):
-                missedWordsCount += 1
-                missedWord = token
+            [missedWordsCount,missedWord] = isTokenInTokenRoman(token,tokenRomanValue,missedWordsCount)
         else:
-            return "I have no idea what you are talking about"
+            return noIdeaError
     return missedWord
+
+def isTokenInTokenRoman(token,tokenRomanValue,missedWordsCount):
+    if (token not in tokenRomanValue):
+        missedWordsCount += 1
+        missedWord = token
+        return missedWordsCount,missedWord
+    return missedWordsCount,""
