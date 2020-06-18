@@ -3,6 +3,7 @@ from app.input_processor.input_data import get_file_data
 from app.roman_numbers_conversion.missed_words import find_missed_word_credits
 from app.roman_numbers_conversion.queries_solutions import answe_for_query_many, answer_for_query_much
 from app.output_processor.print_data import print_output_data
+from constants import error_codes
 
 ''' to give the answe with query text ex: glob prok silver is 68.0'''
 def get_answer(flag,line,answe_query,start_ind):
@@ -13,7 +14,6 @@ def get_answer(flag,line,answe_query,start_ind):
 
 ''' the method will return the answers for queries '''
 def answer_queries(split_line,token_roman_value,missing_values_for_metals):
-    LINE_ERROR = "Incorrect line type is supplied"
     line = " "
     line = line.join(split_line)
     length = len(split_line)-1
@@ -26,7 +26,7 @@ def answer_queries(split_line,token_roman_value,missing_values_for_metals):
         start_ind = 12
         answer_to_query = get_answer(flag, line, answe_query, start_ind)
     else:
-        answer_to_query = LINE_ERROR
+        answer_to_query = error_codes.LINE_ERROR
     return answer_to_query
 '''
 The method processingLine will process each line of file input_data 
@@ -45,14 +45,13 @@ def processing_line(line,split_line,LINE_ERROR,missing_values_for_metals,answer_
 The method merchant_guide_to_galaxy will give the solutu 
 '''
 def merchant_guide_to_galaxy(file_data):
-    LINE_ERROR = "Incorrect line type is supplied"
     missing_values_for_metals = {}
     answer_to_queries = []
     token_roman_value = {}
     file_data = list(map(lambda x: x.upper(), file_data))
     for line in file_data:
         split_line = line.split()
-        processing_line(line,split_line,LINE_ERROR,missing_values_for_metals,answer_to_queries,token_roman_value)
+        processing_line(line,split_line,error_codes.LINE_ERROR,missing_values_for_metals,answer_to_queries,token_roman_value)
     return answer_to_queries
 
 #main method

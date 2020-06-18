@@ -1,14 +1,14 @@
 from functools import reduce
 
 from app.roman_numbers_conversion.roman_numbers_validator import validate_roman_number
+from constants import error_codes
 
 '''finding the dicimal number equivalent to roman_string'''
 def roman_to_number(roman_string):
-    ROMAN_NUMBER_ERROR = "This is not a valid roman number"
     if(validate_roman_number(roman_string)):
         integer_value = convert_roman_to_number(roman_string)
         return integer_value
-    return ROMAN_NUMBER_ERROR
+    return error_codes.ROMAN_NUMBER_ERROR
 
 def convert_roman_to_number(roman_string):
     rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}

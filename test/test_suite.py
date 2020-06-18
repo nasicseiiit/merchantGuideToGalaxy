@@ -11,7 +11,7 @@ def suite():
     suite = unittest.TestSuite()
     suite.addTest(test_file_data('test_get_file_data'))
     suite.addTest(test_roman_to_decimal_conversion('test_roman_to_dec'))
-    suite.addTest(test_roman_to_decimal_conversion('test_roman_to_decimal_fsaailing_to_convert'))
+    suite.addTest(test_roman_to_decimal_conversion('test_roman_to_decimal_failing_to_convert'))
     suite.addTest(test_roman_validator('test_is_it_roman_char'))
     suite.addTest(test_roman_validator('rtest_is_it_oman_char_returning_false'))
     suite.addTest(test_validate_solution_for_much_queries('test_to_validate_solution_for_much_queries'))
