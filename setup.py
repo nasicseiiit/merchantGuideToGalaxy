@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='merchantGuideToGalaxy',
+    name='merchant_guide_to_galaxy',
     version='',
     packages=['app'],
     url='',

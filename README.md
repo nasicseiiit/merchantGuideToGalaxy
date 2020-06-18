@@ -1,4 +1,4 @@
-# merchantGuideToGalaxy
+# merchant_guide_to_galaxy
 
 You decided to give up on earth after the latest financial collapse left 99.99% of the earth's population with 0.01% of the wealth. Luckily, with the scant sum of money that is left in your account, you are able to afford to rent a spaceship, leave earth, and fly all over the galaxy to sell common metals and dirt (which apparently is worth a lot).
 Buying and selling over the galaxy requires you to convert numbers and units, and you decided to write a program to help you.
@@ -75,23 +75,23 @@ Please install python 3 and above
 
 # Installation
 
-First, clone merchantGuideToGalaxy using git
+First, clone merchant_guide_to_galaxy using git
 
-_`https://github.com/nasicseiiit/merchantGuideToGalaxy`_
+_`https://github.com/nasicseiiit/merchant_guide_to_galaxy`_
 
 # To build the project
 
-Then, cd to the merchantGuideToGalaxy folder 
+Then, cd to the merchant_guide_to_galaxy folder 
 
- cd merchantGuideToGalaxy/
+ cd merchant_guide_to_galaxy/
  
  sudo python setup.py install 
 
 # To run the project
 
- cd to the merchantGuideToGalaxy folder 
+ cd to the merchant_guide_to_galaxy folder 
  
- cd merchantGuideToGalaxy
+ cd merchant_guide_to_galaxy
  
  cd to the values folder in app
  
@@ -109,7 +109,7 @@ provide the input format using CLI or STDIN
 
 # Steps to run the test cases
  
- cd to merchantGuideToGalaxy
+ cd to merchant_guide_to_galaxy
 
  Then, Execute below command
  
@@ -120,7 +120,7 @@ provide the input format using CLI or STDIN
 As I am a beginner and writing the projects in GitHub. 
 If you have any ideas or improvements, just open an issue by clicking on below link and tell me what you think.
 
-https://github.com/nasicseiiit/merchantGuideToGalaxy/issues/new
+https://github.com/nasicseiiit/merchant_guide_to_galaxy/issues/new
 
 If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
 
