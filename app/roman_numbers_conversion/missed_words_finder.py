@@ -1,4 +1,4 @@
-from app.roman_numbers_conversion.roman_to_number_conversion import roman_to_number
+from app.roman_numbers_conversion.roman_to_decimal_converter import roman_to_decimal
 from app.utility.math import divide
 from constants import error_codes
 
@@ -7,7 +7,7 @@ def get_missed_credits(tokens_and_missed_word, no_of_credits, token_roman_value)
     roman_string = ""
     for token in tokens_and_missed_word:
         roman_string = roman_string+token_roman_value[token]
-    integer_value = roman_to_number(roman_string)
+    integer_value = roman_to_decimal(roman_string)
     return divide(no_of_credits, integer_value)
 
 '''finding the missed words and it's credits'''

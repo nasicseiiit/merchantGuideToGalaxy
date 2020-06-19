@@ -1,5 +1,5 @@
 from app.roman_numbers_conversion.roman_numbers_validator import is_token_in_token_roman_value_map
-from app.roman_numbers_conversion.roman_to_number_conversion import roman_to_number
+from app.roman_numbers_conversion.roman_to_decimal_converter import roman_to_decimal
 from app.utility.math import multiply
 from constants import error_codes
 
@@ -16,5 +16,5 @@ def answer_for_query_many(split_line, token_roman_value, missing_values_for_meta
 def answer_for_query_much(split_line, token_roman_value):
     [flag, roman_string] = is_token_in_token_roman_value_map(split_line, token_roman_value)
     if(flag):
-       return flag, roman_to_number(roman_string)
+       return flag, roman_to_decimal(roman_string)
     return flag, roman_string
