@@ -1,5 +1,6 @@
 import unittest
 
+from test.test_cli_arguments import test_for_cli_arguments
 from test.test_input_data import test_file_data
 from test.test_roman_to_decimal import test_roman_to_decimal_conversion
 from test.test_roman_validator import test_roman_validator
@@ -9,6 +10,7 @@ from test.test_to_validate_solutions_for_many_queries import test_validate_solut
 ''' test suite to run the all test cases'''
 def suite():
     suite = unittest.TestSuite()
+    suite.addTest(test_for_cli_arguments('test_get_file_name'))
     suite.addTest(test_file_data('test_get_file_data'))
     suite.addTest(test_roman_to_decimal_conversion('test_roman_to_dec'))
     suite.addTest(test_roman_to_decimal_conversion('test_roman_to_decimal_failing_to_convert'))

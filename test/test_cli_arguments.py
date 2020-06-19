@@ -2,8 +2,6 @@
 import unittest
 
 from app.input_processor.cli_rguments import get_cli_arguments
-from app.input_processor.input_data import get_file_data
-
 
 class test_for_cli_arguments(unittest.TestCase):
     '''
