@@ -19,7 +19,7 @@ def find_missed_word_credits ( split_line, token_roman_value ):
     tokens_missed_word_length = len(tokens_and_missed_word)
     split_line_length = len(split_line)
     missed_word = get_missed_word(tokens_and_missed_word[:tokens_missed_word_length-SUBTRACT_TWO], token_roman_value)
-    missed_word_value = get_missed_credits(tokens_and_missed_word[:tokens_missed_word_length-SUBTRACT_THREE], split_line[split_line_length-SUBTRACT_ONE], token_roman_value)
+    [flag, missed_word_value] = get_missed_credits(tokens_and_missed_word[:tokens_missed_word_length-SUBTRACT_THREE], split_line[split_line_length-SUBTRACT_ONE], token_roman_value)
     return missed_word, missed_word_value
 
 ''' finding the missed words'''
