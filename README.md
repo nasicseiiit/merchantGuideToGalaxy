@@ -114,6 +114,16 @@ provide the input format using CLI or STDIN
  Then, Execute below command
  
   `python -m unittest test/TestSuite.py`
+
+# Steps to run test coverage
+
+ cd to merchantGuideToGalaxy
+ 
+ Then, Execute below command
+ 
+ `coverage run -m unittest discover` -> It will give the test cases results
+ 
+ `coverage report -m` -> It will give the report of test coverage of each method
   
 # Contributing
 
