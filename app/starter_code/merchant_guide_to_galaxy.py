@@ -1,7 +1,7 @@
 from app.input_processor.cli_rguments import get_cli_arguments
 from app.input_processor.input_data import get_file_data
 from app.roman_numbers_conversion.missed_words_finder import find_missed_word_credits
-from app.roman_numbers_conversion.queries_solutions import answe_for_query_many, answer_for_query_much
+from app.roman_numbers_conversion.solutions_finder import answer_for_query_many, answer_for_query_much
 from app.output_processor.print_data import print_output_data
 from constants import error_codes
 
@@ -18,7 +18,7 @@ def answer_queries(split_line,token_roman_value,missing_values_for_metals):
     line = line.join(split_line)
     length = len(split_line)-1
     if(split_line[1] == "MANY"):
-        [flag,answe_query] = answe_for_query_many(split_line[4:length],token_roman_value,missing_values_for_metals)
+        [flag,answe_query] = answer_for_query_many(split_line[4:length],token_roman_value,missing_values_for_metals)
         start_ind = 20
         answer_to_query = get_answer(flag,line,answe_query,start_ind)
     elif(split_line[1] == "MUCH"):
