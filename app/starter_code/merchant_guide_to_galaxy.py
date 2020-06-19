@@ -1,6 +1,6 @@
 from app.input_processor.cli_rguments import get_cli_arguments
 from app.input_processor.input_data import get_file_data
-from app.roman_numbers_conversion.missed_words import find_missed_word_credits
+from app.roman_numbers_conversion.missed_words_finder import find_missed_word_credits
 from app.roman_numbers_conversion.queries_solutions import answe_for_query_many, answer_for_query_much
 from app.output_processor.print_data import print_output_data
 from constants import error_codes
