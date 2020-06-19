@@ -7,6 +7,7 @@ from test.test_roman_validator import test_roman_validator
 from test.test_to_validate_solutions_for_much_queries import test_validate_solution_for_much_queries
 from test.test_to_validate_solutions_for_many_queries import test_validate_solution_for_many_queries
 from test.test_math import test_for_math_utility
+from test.test_missed_words_finder import test_for_missed_words_finder
 
 ''' test suite to run the all test cases'''
 def suite():
@@ -28,6 +29,10 @@ def suite():
     suite.addTest(test_for_math_utility('test_multiply_value_error'))
     suite.addTest(test_for_math_utility('test_divide'))
     suite.addTest(test_for_math_utility('test_divide_value_error'))
+    suite.addTest(test_for_missed_words_finder('test_get_missed_credits'))
+    suite.addTest(test_for_missed_words_finder('test_find_missed_word_credits'))
+    suite.addTest(test_for_missed_words_finder('test_get_missed_word'))
+
     return suite
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@ from app.roman_numbers_conversion.missed_words_finder import get_missed_credits,
 
 class test_for_missed_words_finder(unittest.TestCase):
     '''
-    test case with a valid missed metal
+    test case to find the missed metal credits
     '''
     def test_get_missed_credits(self):
         token_roman_value = {'GLOB': 'I', 'PROK': 'V', 'PISH': 'X', 'TEGJ': 'L'}
@@ -17,6 +17,9 @@ class test_for_missed_words_finder(unittest.TestCase):
         print(actual_answer)
         self.assertEqual(expected_answer, actual_answer)
 
+    '''
+        test case to find the missed word and missed metal credits 
+        '''
     def test_find_missed_word_credits(self):
         split_line = ['GLOB', 'GLOB', 'SILVER', 'IS', '34']
         token_roman_value = {'GLOB': 'I', 'PROK': 'V', 'PISH': 'X', 'TEGJ': 'L'}
@@ -25,6 +28,9 @@ class test_for_missed_words_finder(unittest.TestCase):
         print(actual_answer)
         self.assertEqual(expected_answer, actual_answer)
 
+    '''
+        test case to find the missed word 
+        '''
     def test_get_missed_word(self):
         tokens_and_missed_word = ['GLOB', 'GLOB', 'SILVER']
         token_roman_value = {'GLOB': 'I', 'PROK': 'V', 'PISH': 'X', 'TEGJ': 'L'}
