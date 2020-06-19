@@ -4,7 +4,7 @@ import unittest
 from app.utility.math import multiply
 
 
-class test_for_missed_words_finder(unittest.TestCase):
+class test_for_math_utility(unittest.TestCase):
     '''
     test case with a valid missed metal
     '''
