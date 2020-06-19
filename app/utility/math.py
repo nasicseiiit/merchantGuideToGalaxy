@@ -2,20 +2,19 @@
 it is a multiplication utility
 it will try to convert the given string to float if any issue it will return the string else it will return the muliplied valiue.
 '''
-def multiply(integer_value,missed_metal_value):
+def multiply(a, b):
     try:
-        credits = float(integer_value) * float(missed_metal_value)
+        result = float(a) * float(b)
         flag = 1
-        return flag, credits
+        return flag, result
     except ValueError:
-        return flag, integer_value
+        return flag, a
 '''
 it is a division utility
 it will try to convert the given string to float if any issue it will return the string else it will return the divided valiue.
 '''
-def divide(no_of_credits,integer_value):
+def divide(a, b):
     try:
-        creditsForMissedWord = float(no_of_credits)/float(integer_value)
-        return creditsForMissedWord
+        return float(a)/float(b)
     except ValueError:
-        return integer_value
+        return b
