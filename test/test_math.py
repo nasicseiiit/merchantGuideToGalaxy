@@ -6,8 +6,9 @@ from app.utility.math import multiply
 
 class test_for_math_utility(unittest.TestCase):
     '''
-    test case with a valid missed metal
+    test case with a valid numbers
     '''
+
     def test_multiply(self):
         a = 4
         b = 17.0
@@ -17,9 +18,8 @@ class test_for_math_utility(unittest.TestCase):
         self.assertEqual(expected_answer, actual_answer)
 
     '''
-        test case with a valid missed metal
-        '''
-
+    test case with a invalid numbers 
+    '''
     def test_multiply_value_error(self):
         a = "Error"
         b = 4
@@ -29,9 +29,8 @@ class test_for_math_utility(unittest.TestCase):
         self.assertEqual(expected_answer, actual_answer)
 
     '''
-       test case with a valid missed metal
-       '''
-
+    test case with a valid numbers 
+    '''
     def test_divide(self):
         a = 17
         b = 2
@@ -41,9 +40,8 @@ class test_for_math_utility(unittest.TestCase):
         self.assertEqual(expected_answer, actual_answer)
 
     '''
-        test case with a valid missed metal
-        '''
-
+    test case with a invalid numbers 
+    '''
     def test_divide_value_error(self):
         a = "Error"
         b = 4
